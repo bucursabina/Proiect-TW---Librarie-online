@@ -1,0 +1,352 @@
+html {
+    font-size: 18px; 
+    transition: font-size 0.75s ease-in-out;
+}
+
+p {
+    font-size: 1.2rem; 
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+li {
+    font-size: 1.1rem;
+}
+
+
+
+body{
+
+        /* Definirea variabilelor în interiorul selectorului body */
+        /* Culori:- Primary: #FAE4DC, Secundar 1: #C79E8F, Secundar 2: #94604D, Secundar 3: #61311F,Secundar 4: #33150A*/
+        --culoare-principala: #FAE4DC; 
+        --culoare-secundara1: #C79E8F;
+        --culoare-secundara2: #94604D; 
+        --culoare-secundara3: #61311F; 
+        --culoare-secundara4: #33150A;
+
+        /* Aplicarea variabilelor */
+        background-color: var(--culoare-principala);
+        color: var(--culoare-secundara4);
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        --spatiere-mare: 100px;
+        padding-left: var(--spatiere-mare);
+        padding-right: var(--spatiere-mare);
+        --gap-mare: 20px; 
+        --gap-mediu: 15px;  
+        --gap-mic: 10px;  
+       
+        
+        }
+        /* 2.c Izolați vizual zonele paginii: header, footer, și zonele gridului folosind minim 3 dintre următoarele efecte css: 
+        background  de culoare (aleasă din schema cromatică) diferită pe zone diferite, border, colțuri rotunjite ale box-ului, box-shadow */
+        header {
+        background-color: var(--culoare-secundara1);
+        padding: 10px 20px;
+        text-align: center; 
+        border-bottom: 3px solid var(--culoare-secundara2); 
+        border-radius: 10px 10px 0 0; 
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+
+        }
+
+        header a {
+        color: var(--culoare-secundara2);
+        }
+
+        a:visited {
+            color: var(--culoare-secundara4);
+        }
+
+        a[href^="http"]::before {
+            content: "⮳";
+            font-size: 1.5em; 
+            margin-right: 0.2em;
+            transition: color 0.2s ease;
+        }
+        
+        a[href^="http"]:hover::before {
+            color: var(--culoare-secundara4);
+
+        }
+
+        main a {
+            position: relative;
+            text-decoration: none;
+            color: var(--culoare-secundara4); 
+            
+            background: radial-gradient(
+                circle,
+                var(--culoare-secundara1) 0%, 
+                var(--culoare-secundara1) 40%, 
+                transparent 80%, 
+                transparent 100% 
+            );
+            
+            background-position: center; 
+            background-size: 0% 0%; 
+            background-repeat: no-repeat; 
+            transition: background-size 0.6s ease-in-out; 
+        }
+        
+        main a:hover {
+            background-size: 100% 100%; 
+        }
+
+
+        a:active {
+            border: 2px solid var(--culoare-secundara3);
+            padding: 2px;
+            border-radius: 4px;
+        }
+
+
+        h1{
+        color: var(--culoare-secundara4);
+       
+        }
+        h2{
+        color: var(--culoare-secundara3);
+        }
+        h3{
+        color: var(--culoare-secundara2);
+        }
+
+         nav ul li a {
+        text-decoration: none;
+        }
+
+        main {
+        padding: 20px;
+        }
+
+        footer {
+        background-color: var(--culoare-secundara1);
+        color: var(--culoare-principala);
+        padding: 10px 20px;
+        text-align: center;
+        border-top: 3px solid var(--culoare-secundara2); 
+        border-radius: 0 0 10px 10px; 
+        box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        footer a {
+        color: var(--culoare-principala);
+        }
+
+
+
+#grid-pagina{
+    display:grid;
+    grid-template-areas: "zona-unu zona-unu zona-unu"
+                         "zona-opt zona-opt zona-opt"
+                         "zona-trei zona-doi zona-patru"
+                         "zona-cinci zona-sase zona-sapte";
+    gap: var(--gap-mare);
+    padding: 10px;
+    border-bottom: 3px solid var(--culoare-secundara2); 
+    border-radius: 10px 10px 10px 10px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+#grid-pagina > *{
+
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#welcome {
+    grid-area: zona-unu;
+}
+
+#tabel {
+    grid-area: zona-doi;
+}
+
+#calendar {
+    grid-area: zona-trei;
+}
+
+#anunturi {
+    grid-area: zona-patru;
+}
+
+#intrebari {
+    grid-area: zona-cinci;
+}
+
+#statistici {
+    grid-area: zona-sase;
+}
+
+#site {
+    grid-area: zona-sapte;
+}
+
+#ZonaMain {
+    grid-area: zona-opt;
+}
+
+
+
+#tab-orar {
+    border-collapse: collapse; 
+    border: 2px solid var(--culoare-secundara3);
+    text-align: center;
+}
+
+
+#tab-orar th {
+    border: 3px solid var(--culoare-secundara3);
+    padding: 10px;
+    text-align: center;
+    background-color: var(--culoare-secundara1);
+
+}
+#tab-orar caption {
+    caption-side: bottom; 
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+#tab-orar tbody tr:nth-child(odd) {
+    color: var(--culoare-secundara2);
+    box-shadow: 2px 2px 5px var(--culoare-secundara1);  
+
+}
+
+#tab-orar tbody tr:nth-child(even) {
+    color: var(--culoare-secundara2); 
+    box-shadow: 2px 2px 5px var(--culoare-secundara3); 
+
+}
+
+#tab-orar tbody tr {
+    transition: background-color 0.75s ease, font-size 0.75s ease; 
+}
+
+#tab-orar tbody tr:hover {
+    background-color: var(--culoare-secundara1); 
+    font-size: 1.2em; 
+}
+.tabel-container {
+    overflow: hidden; 
+}
+
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---- iframe video etapa 2 ------*/
+
+.taburi-iframe {
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+    margin-bottom: 20px; 
+}
+
+
+.taburi-iframe a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--culoare-secundara3); 
+    background-color: var(--culoare-secundara1);
+    border: 2px solid var(--culoare-secundara4); 
+    border-radius: 8px; 
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: inset 0px 4px 10px var(--culoare-secundara3);
+}
+
+
+.taburi-iframe a:hover {
+    background-color:var(--culoare-secundara2); 
+    transform: scale(1.05); 
+}
+
+
+iframe[name="ifr-video"] {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    display: block;
+    margin: 0 auto; 
+    border-radius: 10px; 
+}
+
+
+
+
+
+
+
+/* ---- link sus etapa 2 ------*/
+
+#link-top{
+    position: fixed;
+    bottom: 0.3em;
+    left: 0.3em;
+    opacity: 0.5;
+    width: 3.23rem; 
+    height: 3.5rem; 
+    box-sizing: border-box;
+    text-align: center;
+    border: 5px solid grey;
+    border-radius: 1.5rem 1.5rem 0 0; /* forma rotunjita */
+    background: var(--culoare-secundara1);
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    font-size: 3rem; /* marimea sagetii */
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--culoare-secundara4);
+    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.3); /*gradient */
+    border:none
+
+}
+#link-top:hover{
+  opacity:1;
+}
+
+#link-top:hover #top {
+    transform: scale(1.3); /* Enlarges the arrow */
+    transition: transform 0.8s ease-in-out;
+}
+
+/* taburile iframe */
+.taburi-iframe {
+    display: flex; /* aliniere orizontală */
+    justify-content: center; /* centrate */
+    gap: 10px; /* spatiu taburi */
+    margin-bottom: 15px; 
+}
+
+#hamburger, #ch-menu{
+    display:none;
+  }
+  ul.meniu div.imag-icon{
+    display:none;
+  }

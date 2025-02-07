@@ -1,0 +1,126 @@
+body {
+  --culoare-text: #61311F;
+  --culoare-buton: #C79E8F;
+  --culoare-hover: #94604D;
+  --culoare-submeniu: #C79E8F;
+}
+
+.meniu {
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--culoare-buton);
+}
+.meniu li {
+  position: relative;
+}
+.meniu li a {
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  padding: 10px 20px;
+  color: var(--culoare-text);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+.meniu li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--culoare-hover);
+  transform: scale(0);
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+  z-index: -1;
+}
+.meniu li:hover a {
+  color: #fff;
+}
+.meniu li:hover a::before {
+  transform: scale(1);
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .submeniu {
+  display: block;
+  transform: scale(1);
+  opacity: 1;
+}
+.dropdown .submeniu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  background-color: var(--culoare-submeniu);
+  list-style: none;
+  padding: 5px 0;
+  transform: scale(0);
+  transform-origin: top left;
+  opacity: 0;
+  transition: transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.dropdown .submeniu li {
+  position: relative;
+  padding: 5px 15px;
+  transition: background-color 0.3s ease-in-out;
+}
+.dropdown .submeniu li a {
+  color: var(--culoare-text);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+  transition: text-shadow 0.3s ease-in-out;
+}
+.dropdown .submeniu li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--culoare-hover);
+  transform: scale(0);
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+  z-index: -1;
+}
+.dropdown .submeniu li:hover {
+  background-color: var(--culoare-hover);
+}
+.dropdown .submeniu li:hover a {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+.dropdown .submeniu li:hover a::before {
+  transform: scale(1);
+}
+
+@media (max-width: 1000px) {
+  .meniu {
+    font-size: 0.6rem;
+  }
+  .meniu li a {
+    padding: 8px 16px;
+  }
+}
+@media (max-width: 700px) {
+  .meniu {
+    font-size: 0.4rem;
+  }
+  .meniu li a {
+    padding: 6px 12px;
+  }
+}

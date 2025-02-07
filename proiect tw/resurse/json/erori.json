@@ -1,0 +1,31 @@
+{
+    "cale_baza": "/resurse/imagini/",
+    "eroare_default": {
+        "titlu": "Eroare necunoscută",
+        "text": "A apărut o eroare necunoscută! Încercați din nou mai târziu.",
+        "imagine": "eroare.png"
+    },
+    "info_erori": [
+        {
+            "identificator": 403,
+            "status": true,
+            "titlu": "Acces interzis",
+            "text": "Nu ai permisiunea să accesezi această resursă.",
+            "imagine": "403.png"
+        },
+        {
+            "identificator": 404,
+            "status": true,
+            "titlu": "Pagina negăsită",
+            "text": "Pagina pe care o cauți nu există.",
+            "imagine": "404.png"
+        },
+        {
+            "identificator": 400,
+            "status": true,
+            "titlu": "Cerere invalidă",
+            "text": "Cererea trimisă nu poate fi procesată.",
+            "imagine": "400.png"
+        }
+    ]
+}

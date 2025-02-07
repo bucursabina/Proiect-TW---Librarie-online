@@ -1,0 +1,31 @@
+{
+  "name": "proiect-tw",
+  "version": "1.0.0",
+  "description": "Site librarie online",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Carti",
+    "Carti",
+    "recomandate",
+    "Librarie",
+    "online",
+    "Biografii",
+    "Carti",
+    "pentru",
+    "copii",
+    "Carti",
+    "pentru",
+    "adulti",
+    "Poezii"
+  ],
+  "author": "Bucur Sabina-Elena",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "sass": "^1.84.0"
+  }
+}

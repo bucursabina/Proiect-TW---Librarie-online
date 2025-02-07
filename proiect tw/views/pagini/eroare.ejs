@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="Carti, Carti recomandate, Librarie online, Biografii, Carti pentru copii, Carti pentru adulti, Poezii">
+    <meta name="Description" content="Cele mai noi carti, cu promotii si reduceri zilnice. Livrare in limita stocului disponibil.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <title>Universul Cartilor - eroare</title>
+    <link rel="stylesheet" href="/resurse/css/general.css">
+    <%- include("../fragmente/head.ejs");  %> 
+
+</head>
+<body>
+        
+    
+
+    <main>
+        <div id="err-coloane">
+			<div id="err-imag">
+				<img src="<%- locals.imagine %>" />
+			</div>
+			<section>
+				<h2><%- locals.titlu %></h2>
+				<p><%- locals.text %></p>
+			</section>
+		</div>
+    </main>
+    
+    <%- include("../fragmente/footer.ejs");  %> 
+
+
+    </body>
+</html>

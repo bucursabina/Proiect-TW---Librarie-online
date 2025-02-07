@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>
+        <%= titlu || "Universul Cărților" %>
+    </title>
+    <%- include('../fragmente/head.ejs') %>
+</head>
+
+<body>
+    <%- include('../fragmente/header.ejs') %>
+
+        <main>
+            <div id="grid-pagina">
+                <section id="welcome">
+                    <h1>Bine ați venit !!!</h1>
+                    <p>Vă primim cu brațele deschise în fascinanta lume a cărților, unde fiecare pagină ascunde o
+                        poveste de neuitat.</p>
+                    <img src="https://img.freepik.com/free-vector/library-with-bookcases-ladder-chair-lamp_107791-3023.jpg?t=st=1738802476~exp=1738806076~hmac=537307014c54a4517756ba2411d121b08bc068f2aeac65f033180665afb2719c&w=1380"
+                        alt="Imagine Welcome">
+                </section>
+
+                <section id="tabel">
+                    <h2>Asistență telefonică</h2>
+                    <div class="tabel-container">
+
+                        <caption>Suport comenzi și ofertă online</caption>
+                        <table id="tab-orar">
+                            <thead>
+                                <tr>
+                                    <th>Zi</th>
+                                    <th>Interval dimineață</th>
+                                    <th>Pauză de masă</th>
+                                    <th>Interval seară</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Luni</td>
+                                    <td>09-12</td>
+                                    <td>12-13</td>
+                                    <td>13-20</td>
+                                </tr>
+                                <tr>
+                                    <td>Marți</td>
+                                    <td>09-12</td>
+                                    <td>12-13</td>
+                                    <td>13-20</td>
+                                </tr>
+                                <tr>
+                                    <td>Miercuri</td>
+                                    <td>9-11</td>
+                                    <td>11-12</td>
+                                    <td>12-20</td>
+                                </tr>
+                                <tr>
+                                    <td>Joi</td>
+                                    <td>9-11</td>
+                                    <td>11-12</td>
+                                    <td>12-21</td>
+                                </tr>
+                                <tr>
+                                    <td>Vineri</td>
+                                    <td>9-12</td>
+                                    <td>12-14</td>
+                                    <td>14-19</td>
+                                </tr>
+                                <tr>
+                                    <td>Sâmbătă</td>
+                                    <td>10-12</td>
+                                    <td>12-13</td>
+                                    <td>13-16</td>
+                                </tr>
+                                <tr>
+                                    <td>Duminică</td>
+                                    <td>Închis</td>
+                                    <td>-</td>
+                                    <td>Închis</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5">* În zilele de sărbătoare programul poate suferi modificări.</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </section>
+
+
+                <section id="calendar">
+                    <h2>Calendar de evenimente</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at.</p>
+                </section>
+
+
+                <section id="anunturi">
+                    <h2>Anunțuri</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dignissim id justo nec facilisis.
+                        Praesent.</p>
+                </section>
+
+
+                <section id="statistici">
+                    <h2>Statistici</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit sit amet augue porttitor
+                        consequat. Sed feugiat nunc arcu, sed tincidunt velit.</p>
+                </section>
+
+
+                <section id="site">
+                    <h2>Date despre Site și server</h2>
+                    <p>IP-ul tău este: <%= ip %>
+                    </p>
+                </section>
+
+
+                <section id="ZonaMain">
+                    <section id="noutati">
+                        <h2>Noutăți</h2>
+                        <p>Descoperă ce <b>cărți</b> sunt în tendință acum și <em>autorii</em> preferați în această
+                            perioadă. Oferim o largă varietate de cărți, inclusiv <b>cărți pentru adulți</b>, romane de
+                            <i>ficțiune</i>, <b>poezii</b> și <b>bibliografii</b>.
+                        </p>
+                        <ul>
+                            <li>
+                                <em>„Arta subtilă a nepăsării”</em> de Mark Manson –
+                                <q>Unii spun că sunt un idiot. Alții zic că le-am salvat viața. Citiți și decideți
+                                    singuri!</q>
+                            </li>
+                            <li>
+                                <em>„Puterea prezentului”</em> de Eckhart Tolle – Mesajul cărții este pe cât de simplu,
+                                pe atât de revelator: dacă alegem să trăim în prezent, ne dăm șansa de a avea o viață
+                                fericită.
+                            </li>
+                        </ul>
+                        <div class="taburi-iframe">
+                            <a href="https://www.youtube.com/embed/2YLecGKaBEQ?si=bFdKpUV4OeBbxE8K"
+                                target="ifr-video">Arta subtilă a nepăsării – recenzie</a>
+                            <a href="https://www.youtube.com/embed/UL0Yh5LN3QE?si=QsnlOezpSnb0iy3C"
+                                target="ifr-video">Puterea prezentului – recenzie</a><br>
+                        </div>
+                        <div class="video-container">
+                            <iframe name="ifr-video" src="https://www.youtube.com/embed/2YLecGKaBEQ?si=bFdKpUV4OeBbxE8K"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </section>
+
+
+                    <section id="promotii">
+                        <h2>Promoții</h2>
+                        <p>Profită de promoțiile noastre și descoperă cele mai bune oferte pentru cărțile tale
+                            preferate.</p>
+                        <article id="Reduceri_de_sarbatori">
+                            <h3>Reduceri de sărbători – 50% reducere la articolele selectate</h3>
+                            <p>În spiritul Crăciunului avem pentru voi o selecție de cărți care vă vor aduce căldură în
+                                casă. Printre care și
+                                <a href="./resurse/recomandari/VrajitoruldinOz.pdf" download>o carte cadou de
+                                    Crăciun!</a>
+                            </p>
+                            <ul>
+                                <li>
+                                    <em>„Colind de Crăciun”</em> de Charles Dickens – O poveste clasică despre
+                                    transformare și spiritul sărbătorilor.
+                                    - <s>60 de lei</s> - <ins>30 lei</ins>
+                                </li>
+                                <li>
+                                    <em>„Scrisorile lui Moș Crăciun”</em> de J.R.R. Tolkien – Scrisori magice din
+                                    Laponia trimise de Moș Crăciun.
+                                    - <s>80 de lei</s> - <ins>40 lei</ins>
+                                </li>
+                                <li>
+                                    <em>„Poveste de iarnă”</em> de Mark Helprin – O poveste romantică și magică,
+                                    perfectă pentru zilele reci.
+                                    - <s>50 de lei</s> - <ins>25 lei</ins>
+                                </li>
+                                <li>
+                                    <em>„Magia Crăciunului”</em> de Nora Roberts – O colecție de povești de dragoste cu
+                                    tematică de sărbători.
+                                    - <s>40 de lei</s> - <ins>20 lei</ins>
+                                </li>
+                                <li>
+                                    <em>„Crăciunul lui Poirot”</em> de Agatha Christie – O poveste plină de mister în
+                                    stilul unic al Agathei Christie.
+                                    - <s>50 de lei</s> - <ins>24 lei</ins>
+                                </li>
+                                <li>
+                                    <em>„O noapte de Crăciun”</em> de Nikolai Gogol – O poveste clasică rusească despre
+                                    tradițiile și miracolele de Crăciun.
+                                    - <s>60 de lei</s> - <ins>30 lei</ins>
+                                </li>
+                            </ul>
+                        </article>
+                    </section>
+
+
+                    <section id="recomandari">
+                        <h2><b>Cărți Recomandate</b></h2>
+                        <section>
+                            <h3>Recomandarea noastră pentru sezonul de iarnă</h3>
+                            <figure id="figfata" class="fg-img">
+                                <picture>
+                                    <source srcset="./resurse/recomandari/fataChib1200.jpeg" media="(max-width:1200px)">
+                                    <source srcset="./resurse/recomandari/fataChib700.jpeg" media="(max-width:700px)">
+                                    <img src="./resurse/recomandari/fataChibMICA.jpeg" alt="Fetița cu chibrituri">
+                                </picture>
+                                <figcaption>
+                                    Fiind una din cele mai populare <b>cărți pentru copii</b>, "Fetița cu chibrituri"
+                                    este o poveste scurtă a poetului și scriitorului danez
+                                    <a href="https://en.wikipedia.org/wiki/Hans_Christian_Andersen" target="_blank">Hans
+                                        Christian Andersen</a>.
+                                </figcaption>
+                            </figure>
+                        </section>
+                    </section>
+                </section>
+
+
+                <section id="intrebari">
+                    <h2>Întrebări frecvente</h2>
+                    <details>
+                        <summary>Am vrut să comand un produs etichetat ca „Indisponibil”, dar nu am putut. De ce?
+                        </summary>
+                        <p>Dacă un produs este etichetat ca fiind indisponibil, înseamnă că este epuizat la furnizorii
+                            noștri.</p>
+                    </details>
+                    <details>
+                        <summary>Sunt din afara țării și aș vrea să comand ceva. Cum procedez?</summary>
+                        <p>Din păcate nu livrăm în afara țării momentan.</p>
+                    </details>
+                    <details>
+                        <summary>Cum se calculează discountul?</summary>
+                        <p>Formula de calcul a prețului final este următoarea:
+                            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mi>Pretul final</mi>
+                                    <mo>=</mo>
+                                    <mi>Pretul Initial</mi>
+                                    <mo>&times;</mo>
+                                    <mrow>
+                                        <mo>(</mo>
+                                        <mi>1</mi>
+                                        <mo>-</mo>
+                                        <mn>0.5</mn>
+                                        <mo>)</mo>
+                                    </mrow>
+                                </mrow>
+                            </math>
+                        </p>
+                    </details>
+                </section>
+
+
+                <p id="watermark">Bucur<br>Elena-Sabina</p>
+            </div>
+        </main>
+
+        <%- include('../fragmente/footer.ejs') %>
+
+
+</body>
+
+</html>

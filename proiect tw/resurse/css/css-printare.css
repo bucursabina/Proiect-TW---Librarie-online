@@ -1,0 +1,107 @@
+#watermark, #banner {
+display:none;
+}
+@media print {
+    /* imaginile, videoclipurile, iframe-urile și alte elemente media împreună cu elemente dependente de ele (de exemplu descrierile imaginilor) vor fi ascunse. 
+    Linkul către începutul paginii va fi de asemenea ascuns*/
+    img, video, iframe, .video-container, .taburi-iframe, #link-top {
+        display: none;
+    }
+
+    /* Gridul paginii va fi afișat ca block ca să nu apară celulele secționate în paginile printate. */
+    #grid-pagina{
+        display:block;
+        page-break-inside: avoid; /* previne separarea */
+
+    }
+
+    /* toate linkurile din pagină se vor afișa ca text normal (nu colorate sau subliniate) */
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* Bannerul să fie afișat în josul primei pagini, centrat pe orizontală, întins pe 70% din lățimea paginii, într-un border negru inset de 4px*/
+    
+    footer #banner {
+        display:block;
+        position: absolute;
+        bottom: 0;
+        left:20%;
+        width: 70%;
+        text-align: center;
+        border: 4px inset black;
+        }
+        
+        @page:first{
+            #banner {
+                display: block;
+            }
+        }
+            
+        
+        
+    /* Stilizează headingul de nivel 1 și meniul */
+    h1 {
+        text-align: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* Page break după meniu și înainte de footer */
+    nav ul {
+        page-break-after: always;
+    }
+
+    footer {
+        page-break-before: always;
+    }
+
+    /* Pe fiecare pagină va exista un "watermark" care va conține numele vostru (numele scris pe un rând și prenumele sub el. 
+    Acesta va avea lățime de 4cm din lățimea paginii și înalțime de 1cm din înalțimea paginii. Va fi afișat în colțul din dreapta jos al fiecărei pagini. Va avea un border solid de 3px, și colțuri rotunjite; textul din el va fi centrat pe orizontală și cu litere bold. Va avea opacitate de 0.4. */
+   
+
+    #watermark {
+
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        right: 1cm; 
+        width: 4cm;
+        border: 3px solid black;
+        border-radius: 10px;
+        opacity: 0.4;
+        text-align: center;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    
+
+    /* Margini pentru paginile din stânga și dreapta */
+    @page :left {
+        margin-left: 3cm;
+        margin-right: 1cm;
+    }
+
+    @page :right {
+        margin-right: 3cm;
+        margin-left: 1cm;
+    }
+
+}
+
+
+ 

@@ -1,0 +1,37 @@
+html {
+    font-size: 12px; 
+}
+
+p {
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+li {
+    font-size: 0.9rem;
+}
+/*2.a Folosind variabile css, să se adauge o spațiere în stânga și dreapta paginii, comprimând un pic conținutul, dar aerisind pagina.
+ Spațierea trebuie să fie identică în cele două direcții. Spațierea va fi mai mică pe ecran mediu și de valoare minimă pe ecran mic.*/
+body{
+
+    --spatiere-mic: 20px;  
+    padding-left: var(--spatiere-mic);
+    padding-right: var(--spatiere-mic);
+
+}
+
+#grid-pagina{
+    display:block;
+    gap: var(--gap-mic);
+}

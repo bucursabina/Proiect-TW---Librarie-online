@@ -1,0 +1,92 @@
+html {
+    font-size: 15px; 
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+li {
+    font-size: 1rem;
+}
+
+/*2.a Folosind variabile css, să se adauge o spațiere în stânga și dreapta paginii, comprimând un pic conținutul, dar aerisind pagina.
+ Spațierea trebuie să fie identică în cele două direcții. Spațierea va fi mai mică pe ecran mediu și de valoare minimă pe ecran mic.*/
+body {
+    --spatiere-mediu: 50px;
+    padding-left: var(--spatiere-mediu);
+    padding-right: var(--spatiere-mediue);
+}
+
+/* p {
+    font-size: var(--dimensiune-text);
+    transition: font-size 0.75s ease-in-out; 
+}
+
+p:hover {
+    font-size: 25px; 
+} */
+
+#grid-pagina{
+    display:grid;
+    grid-template-areas: "zona-unu zona-unu"
+                         "zona-opt zona-opt"
+                         "zona-trei zona-doi"
+                         "zona-patru zona-doi"
+                         "zona-cinci zona-sapte"
+                         "zona-sase zona-sapte";
+    gap: var(--gap-mediu);
+    padding: 10px
+}
+
+#grid-pagina > *{
+   /*  outline: 1px solid black; */
+    padding: 15px;
+    background-color: var(--culoare3);
+    box-sizing: border-box;
+}
+
+#welcome {
+    grid-area: zona-unu;
+}
+
+#tabel {
+    grid-area: zona-doi;
+}
+
+#calendar {
+    grid-area: zona-trei;
+}
+
+#anunturi {
+    grid-area: zona-patru;
+}
+
+#utilizatori {
+    grid-area: zona-cinci;
+}
+
+#statistici {
+    grid-area: zona-sase;
+}
+
+#site {
+    grid-area: zona-sapte;
+}
+
+#ZonaMain {
+    grid-area: zona-opt;
+}
+

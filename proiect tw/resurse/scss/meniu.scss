@@ -1,0 +1,143 @@
+$transition-speed: 0.3s;
+$padding: 10px 20px;
+
+body {
+  --culoare-text: #61311F;
+  --culoare-buton: #C79E8F;
+  --culoare-hover: #94604D;
+  --culoare-submeniu: #C79E8F;
+}
+
+@mixin hover-effect {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--culoare-hover);
+  transform: scale(0);
+  transform-origin: center center;
+  transition: transform $transition-speed ease-in-out;
+  z-index: -1;
+}
+
+@mixin transition-effect($property) {
+  transition: #{$property} $transition-speed ease-in-out;
+}
+
+.meniu {
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--culoare-buton);
+
+  li {
+    position: relative;
+
+    a {
+      display: inline-block;
+      position: relative;
+      z-index: 0;
+      padding: $padding;
+      color: var(--culoare-text);
+      text-decoration: none;
+      font-weight: bold;
+      @include transition-effect(color);
+
+      &::before {
+        @include hover-effect;
+      }
+    }
+
+    &:hover a {
+      color: #fff;
+    }
+
+    &:hover a::before {
+      transform: scale(1);
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+
+  &:hover .submeniu {
+    display: block;
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .submeniu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    background-color: var(--culoare-submeniu);
+    list-style: none;
+    padding: 5px 0;
+    transform: scale(0);
+    transform-origin: top left;
+    opacity: 0;
+    @include transition-effect(transform);
+    @include transition-effect(opacity);
+
+    li {
+      position: relative;
+      padding: 5px 15px;
+      @include transition-effect(background-color);
+
+      a {
+        color: var(--culoare-text);
+        text-decoration: none;
+        font-weight: bold;
+        @include transition-effect(color);
+        @include transition-effect(text-shadow);
+
+        &::before {
+          @include hover-effect;
+        }
+      }
+
+      &:hover {
+        background-color: var(--culoare-hover);
+
+        a {
+          color: #fff;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+      }
+
+      &:hover a::before {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .meniu {
+    font-size: 0.6rem;
+
+    li a {
+      padding: 8px 16px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .meniu {
+    font-size: 0.4rem;
+
+    li a {
+      padding: 6px 12px;
+    }
+  }
+}
